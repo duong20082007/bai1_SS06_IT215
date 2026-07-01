@@ -15,7 +15,7 @@ class CoursePayload(BaseModel):
     duration: int
     fee: float
 
-@app.post('/courses', status_code=201)
+@app.post('/courses')
 def create_course(course_id: int, new_course: CoursePayload):
     course_data = {
         'id': course_id,
